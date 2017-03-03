@@ -15,17 +15,15 @@ void insertionSort(int arr[], int n)
        arr[j+1] = key;
    }
 }
-void printArray(int arr[], int n)
-{
-   int i;
-   for (i=0; i < n; i++)
-       printf("%d ", arr[i]);
-   printf("\n");
-}
 void main()
 {
-    int arr[] = {12, 11, 13, 5, 6};
+    int arr[] = {9,1,15,13,11};
+    int i;
     int n = sizeof(arr)/sizeof(arr[0]);
+    clrscr();
     insertionSort(arr, n);
-    printArray(arr, n);
+    for (i=0; i < n; i++)
+       printf("%d ", arr[i]);
+   printf("\n");
+   getch();
 }
