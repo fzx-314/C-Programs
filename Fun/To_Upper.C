@@ -1,3 +1,4 @@
+// Convert Each occurence of lower case character to upper case
 #include<stdio.h>
 #include<ctype.h>
 void main()
