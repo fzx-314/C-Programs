@@ -1,5 +1,5 @@
 # C-Programs
 Given Here some standard and classic program of various Topics such as Data Structures, Algorithm, Operating Systems
-Specially for those who like C programming.
+It includes Searching Algorithms, Sorting Algorithms, Greedy programming, Dynamic Programming, Application of Queue data Structure,Application of Array Data Structure etc, Tree traversal.
 
-Anyone who has their own program currently not present can share it.
+Currently We have very few Programs and planning to improve database. We want as many help as possiable.
