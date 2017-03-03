@@ -51,7 +51,7 @@ void FCFS()
 	printf("Average waiting time:%f\nAverage turnaround time=%f\nAverage completion time:%f",(awt/size),(ata/size),(act/size));
 
 }
-void RR()
+/*void RR()
 {
 	int time_quantam,t=0;
 	int tail=0,head=size,Queue[size],length,k;
@@ -71,7 +71,7 @@ void RR()
 			waiting_time[i]=completion_time[i]-arrival_time[i];
 		}
 	}while(tail!=head);
-}
+}*/
 void main()
 {
 	int i,sp,at,count;
