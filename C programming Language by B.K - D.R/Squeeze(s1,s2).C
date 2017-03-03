@@ -1,3 +1,8 @@
+/*
+Exercise 2.4
+Write an alternate versiom of squeeze(s1,s2) that delete each character in s1 that matches 
+any character in s2.
+*/
 #include<stdio.h>
 void main()
 {
