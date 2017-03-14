@@ -33,3 +33,55 @@ int main(void) {
 	itob(n,s,b);
 	return 0;
 }
+
+
+Another Version
+#include <stdio.h>
+#include <math.h>
+void convert (long n, char s[], int b);
+void main()
+{
+	long n;
+	int b;
+	char s[20];
+	printf("Enter the number upto 5 digits:\n");
+	scanf("%ld", &n);
+	printf("Enter the base within 16 :\n");
+	scanf("%d", &b);
+	convert (n, s, b);
+}
+
+void convert (long n, char s[], int b)
+{
+	long i=0,x=0,y,p;
+	L1:
+	i=(n/pow(b, x));
+	if(i> 0)
+	{
+		++x;
+		goto L1;
+	}
+	--x;
+	y=x;
+	while(x>=0)
+	{
+		p= pow(b,x);
+		i= (n/p);
+		if(i> 9)
+		{
+			s[y-x]= 64+  (i-9);
+		}
+		else
+		s[y-x]= 48+i;
+		--x;
+		n= n % p;
+	}
+	s[y+1]= '\n';
+	x=0;
+	printf("\n\n");
+	while(s[x]!='\n')
+	{
+		printf("%c", s[x]);
+		++x;
+	}
+}
