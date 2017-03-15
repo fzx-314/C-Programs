@@ -10,3 +10,6 @@ Heap Sort
 
  Merge Sort
   Just few bugs
+ 
+ Bubble Sort
+  Modify loop condition and add comments
