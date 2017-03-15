@@ -7,3 +7,6 @@ Heap Sort
  Insertion Sort
   Modificaton is to Take input form System rather then an predefine array.
   Add comments in source code where possiable.
+
+ Merge Sort
+  Just few bugs
