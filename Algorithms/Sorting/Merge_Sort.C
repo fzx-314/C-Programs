@@ -47,7 +47,7 @@ int main()
 	}
 	printf("Given array is\n");
 	print(a);
-	merge_sort(a,0,10);// Recursive call to merge_sort function
+	merge_sort(a,0,9);// Recursive call to merge_sort function
 	printf("\nSorted array is\n");
 	print(a);
 	return 0;
