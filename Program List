@@ -11,7 +11,10 @@ Quick Sort (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Sorting/
 Counting Sort (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Sorting/Readme)
 
 Given an array and an integer find if there exist two element in array whoes sum is equal to given integer in O(nlogn) time 
-  (https://github.com/fzx-314/C-Programs/blob/master/Algorithms/Application/array_sum_problem.C)
+  (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Application/array_sum_problem.C)
+  
+To find minimum and maximum element in an unsorted array in O(n) time
+  (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Application/min_max_in_unsorted.C)
   
 Stack Data Structure (http://github.com/fzx-314/C-Programs/blob/master/Data%20Structure/stack.C)
 
