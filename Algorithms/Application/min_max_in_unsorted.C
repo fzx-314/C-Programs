@@ -27,7 +27,7 @@ void Min_Max(int a[],int n)
         i=1;
         j=2;
     }
-    for(;i<n,j<n;i++,j++)
+    for(;i<n,j<n;i+2,j+2)
     {
         if(a[i]<=a[j])   //1st comparision
         {
