@@ -1,29 +1,25 @@
-Insertion Sort ( http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Sorting/Intersion_sort.C )
-
-Heap Sort (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Sorting/HEAP.C)
-
-Merge Sort (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Sorting/Merge_Sort.C)
-
-Bubble Sort (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Sorting/Bubble_sort.C)
-
-Quick Sort (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Sorting/Quick_sort.C)
-
-Counting Sort (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Sorting/Readme)
-
-Given an array and an integer find if there exist two element in array whoes sum is equal to given integer in O(nlogn) time 
-  (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Application/array_sum_problem.C)
+Algorithms/Sorting
+  Insertion Sort
+  Heap Sort
+  Merge Sort 
+  Bubble Sort 
+  Quick Sort 
+  Counting Sort 
   
-To find minimum and maximum element in an unsorted array in O(n) time
-  (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Application/min_max_in_unsorted.C)
+Algorithm/Application
+  Given an array and an integer find if there exist two element in array whoes sum is equal to given integer in O(nlogn) time. 
+  To find minimum and maximum element in an unsorted array in O(n) time.
   
-Stack Data Structure (http://github.com/fzx-314/C-Programs/blob/master/Data%20Structure/stack.C)
+Data Structure  
+  Stack Data Structure
+  Queue Data Structure
 
-Process scheduling (http://github.com/fzx-314/C-Programs/blob/master/Operating%20System/Process/Scheduling/SCHEDU%7E1.C)
+Operating System
+  Process scheduling
+  Disk scheduling
 
-Disk scheduling (http://github.com/fzx-314/C-Programs/blob/master/Operating%20System/Disk/DISK_SCH.C)
+Algorithm/Searching
+  Binary Search
+  Linear Search
 
-Binary Search (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Searching/binary_search.C)
-
-Linear Search (http://github.com/fzx-314/C-Programs/blob/master/Algorithms/Searching/Linear_Search.C)
-
-Program of "C programming Language" by Brian W. Kernighan & Dennis M. Ritchie
+Program of "C programming Language" by Brian W. Kernighan & Dennis M. Ritchie Sepreate List is provided
