@@ -91,7 +91,6 @@ void delete(int num){
 }
 int main(){
 		int num,choice;
-		clrscr();
 		head=NULL;
 		while(1){
 		printf("1)Insert\n2)Delete\n3)Search\n4)Display\n5)Exit\n");
