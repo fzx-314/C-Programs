@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define n 10
+#define n 10			// To change input size without doing multiple changes in code :D
 int main(){
 	int a[n],key,i,j,temp;  // variable decleration
 	for(i=0;i<n;i++)
