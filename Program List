@@ -13,8 +13,9 @@ Algorithm/Application
 Data Structure  
   Stack Data Structure
   Queue Data Structure
-  Linked List Data Structure
+  Singly Linked List Data Structure
   Circular Doubly Linked List
+  Circular Singly Linked List
   
 Hashing
   Hashing with collision resolved by linear probing
