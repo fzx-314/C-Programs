@@ -50,7 +50,7 @@ int main(void) {
     j=9;
     while(i<j)      // Linear scan of array which require order O(n) 
     {
-        if((a[i]+a[j])==x)  // Maintaing two painters i & j one points to start and other to end of array
+        if((a[i]+a[j])==x)  // Maintaing two pointers i & j one points to start and other to end of array
         {
             printf("Element exist whoes sum is %d, Index of number is %d,%d\n",x,(i+1),(j+1));
             break;
