@@ -4,26 +4,26 @@ int *A;
 long int heap_size,length;
 long int s=0,c=0;
 int f=0;
-long int input(){
+long int input(){			//input scanning begins from here
 	long int n,i=0;
 	int k;
 	FILE *fp;
-	fp=fopen("input.txt","r");
+	fp=fopen("input.txt","r");	// reading inout from text file
 	if(!fp)
 		return 1;
 	for(i=0;i<=0;i++)
 		fscanf(fp,"%ld",&n);
-	A=(int *)calloc(n,sizeof(int));
+	A=(int *)calloc(n,sizeof(int)); //creating memory
 	i=0;
 	while(i<n){
-	fscanf(fp,"%d",&k);
+	fscanf(fp,"%d",&k);	// theoritically it should scan all numbers but it is not doing so :( end of world
         *(A+i)=k;
 	i++;
        	}
 	fclose(fp);
 	return n;
 }
-int display(long int n){
+int display(long int n){	// display number in sorted order as well as write it in new file
     long int i=0;
     FILE *fp;
     fp=fopen("output.txt","w+");
@@ -44,7 +44,7 @@ int display(long int n){
     fclose(fp);
     return 0;
 }
-int bubble(int n){
+int bubble(int n){		// function call for bubble sort
     long int i, j, temp;
     int x;
     for(i=0; i<n-1; i++){
@@ -70,7 +70,7 @@ int bubble(int n){
     c++;
     return 0;
 }
-int insertion(long int n){
+int insertion(long int n){		// insertion sort
 	long int i,j,temp;
 	for(i=1;i<n;i++){
 	c++;
@@ -88,7 +88,7 @@ int insertion(long int n){
 	c++;
 	return 0;
 }
-int selection(long int n){
+int selection(long int n){	// selection
 	long int i,j,min,temp,temp1;
 	for(j=0;j<n-1;j++){
 	c++;
@@ -112,7 +112,7 @@ int selection(long int n){
 	c++;
 	return 0;
 }
-int merge(long int p,long int q,long int r){
+int merge(long int p,long int q,long int r){	// merge partion
 	long int n1=q-p+1,n2=r-q,i,j,k;	
 	int *L,*R;	
 	L=(int *)calloc(n1,sizeof(int));
@@ -154,7 +154,7 @@ int merge(long int p,long int q,long int r){
 	s=0;
 	return 0;
 }
-int merge_sort(long int p,long int r){
+int merge_sort(long int p,long int r){		//merge sort
 	long int q;
 	if(p<r){
 	q=(p+r)/2;
@@ -164,7 +164,7 @@ int merge_sort(long int p,long int r){
 	}
 	return 0;
 }
-int heapify(long int i){
+int heapify(long int i){		// function call for heapify
 	long int l,r,largest,temp;
 	l=2*i;
 	r=(2*i)+1;
@@ -182,7 +182,7 @@ int heapify(long int i){
 	}
 	return 0;
 }
-int build_heap(){
+int build_heap(){		// build heap function call
 	long int i;
 	length=heap_size;
 	i=(length/2);
@@ -191,7 +191,7 @@ int build_heap(){
 	}
 	return 0;
 }
-int heap_sort(){
+int heap_sort(){		// final heap sort
 	long int i,temp;
 	length=heap_size;
 	i=length;
@@ -208,7 +208,7 @@ int heap_sort(){
 	s=0;
 	return 0;
 }
-int quick_sort(long int x,long int y){
+int quick_sort(long int x,long int y){	// quick sort fastest of all
 	if(x<y){
 	long int i=x,j=y,p,temp,k;
 	p=*(A+i);
@@ -235,7 +235,7 @@ int quick_sort(long int x,long int y){
 	}
 	return 0;
 }
-int main(int argc,char *argv[]){
+int main(int argc,char *argv[]){	//main for usual user input
 	long int n;
 	char choice=9;
 	n=input();	
