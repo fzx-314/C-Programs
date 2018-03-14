@@ -1,4 +1,4 @@
-/*A program to run tic tac tow */
+/*A program to run tic tac toe */
 #include<stdio.h>
 int i,j,p,x,y,chance=0; 	
 int grid[3][3];
@@ -29,11 +29,11 @@ int position(){
 		grid_l[i][j]=1;
 		if(chance==0){
 			grid[i][j]=0;
-			grid1[i][j]=79;
+			grid1[i][j]=88;
 		}
 		else if(chance==1){
 			grid[i][j]=1;
-			grid1[i][j]=88;
+			grid1[i][j]=79;
 		}
 		w=win();
 		return w;
@@ -43,11 +43,11 @@ int position(){
 /* encode function caluclate the grid position by taking user entered parameter
 for eg: if user enteged position 7 then i value will be 2 and j will be 0 refering to 20 position in grid */
 int encode(){
+	if(p>9)
+		return 11;
 	int temp=p-1,w;
 	i=temp/3;
 	j=temp%3;
-	if(i>2||j>2)
-		return 11;
 	w=position();
 	return w;
 }
@@ -85,9 +85,9 @@ int display(int w){
 	if(w==1||w==2)
 		printf("player %d wins\n\n",w);
 	if(w==10)
-		printf("%d %d is alread filled try again\n",i,j);
+		printf("%d is alread filled try again\n",(i*3+j)+1);
 	if(w==11)
-		printf("cell limit out of bound try again\n");
+		printf("Invalid position try again\n");
 	if(w==0)
 		printf("\nplayer %d chance please enter a value:",chance+1);
 	if(w==9)
@@ -108,7 +108,7 @@ void showInstructions()
     printf("\t\t\t  7 | 8  | 9  \n\n");
      
     printf("-\t-\t-\t-\t-\t-\t-\t-\t-\t-\n\n");
-    printf("\n player 1 is x and player 2 is o\n");
+    printf("\n player 1 is x and player 2 is O\n");
 }
 /*A dynamic grid updating after each moves that a player plays  */
 void showBoard()
@@ -141,8 +141,7 @@ int main(){
 		lock();
 		intialize();
 	do{
-		w=0;
-		c++;				// keeping track of number of moves played
+		w=0;				
 		display(w);
 		scanf("%d",&p);
 		w=encode();
@@ -151,6 +150,7 @@ int main(){
 		else{
 			chance++;
 			chance%=2;
+			c++;				// keeping track of number of moves played
 		}
 		if(c==9&&w!=1&&w!=2)
 			w=9;
