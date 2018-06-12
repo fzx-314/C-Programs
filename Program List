@@ -11,6 +11,7 @@ Algorithm/Searching
   Linear Search
   Jump Search
   Interpolation Search
+  Exponential Search
   
 Algorithm/Application
   Given an array and an integer find if there exist two element in array whoes sum is equal to given integer in O(nlogn) time. 
