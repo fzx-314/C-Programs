@@ -6,8 +6,15 @@ Algorithms/Sorting
   Quick Sort 
   Counting Sort 
   
+Algorithm/Searching
+  Binary Search
+  Linear Search
+  Jump Search
+  Interpolation Search
+  
 Algorithm/Application
   Given an array and an integer find if there exist two element in array whoes sum is equal to given integer in O(nlogn) time. 
+  
   To find minimum and maximum element in an unsorted array in O(n) time.
   
 Data Structure  
@@ -24,9 +31,5 @@ Operating System
   Process scheduling
   Disk scheduling
 
-Algorithm/Searching
-  Binary Search
-  Linear Search
-  Jump Search
 
 Program of "C programming Language" by Brian W. Kernighan & Dennis M. Ritchie Sepreate List is provided
