@@ -1,3 +1,5 @@
+/*Searching in O(root(n)) times algorithm */
+
 #include<stdio.h>
 #include<math.h>
 #define min(a,b) ((a<b)?(a):(b))
