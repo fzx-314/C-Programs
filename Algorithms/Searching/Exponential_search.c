@@ -3,7 +3,7 @@
 #include<stdio.h>
 #define max 10
 #define min(a,b) ((a<b)?(a):(b))
-int range(int a[],int n,int x){
+int expo(int a[],int n,int x){
     if (a[0]==x)
         return 0;
     int i = 1;
@@ -28,6 +28,6 @@ int main(void){
 	int a[10],i,ans,x;
 	for(i=0;i<max;scanf("%d",&a[i++]));
 	scanf("%d",&x);
-	ans=range(a,max,x);
+	ans=expo(a,max,x);
 	printf("\n%d is at index %d\n",x,ans+1);
 }
