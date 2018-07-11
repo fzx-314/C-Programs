@@ -1,4 +1,3 @@
-/* A program for lexical analyzer */
 #include<stdio.h>
 #include<string.h>
 int keyword=0,indentifier=0;
@@ -8,14 +7,14 @@ int iskeyword(char str[]){
 					"void","enum","extern","goto","default","sizeof","volatile","switch","return","if","else","short"};
 	int flag=0,i;
 	for(i = 0; i < 32; ++i){
-        if(strcmp(keywords[i],str)==0){
+        if(strcmp(keywords[i],str)==0){ // Compare if current string matches with any keyword
             flag = 1;
             break;
         }
     }
     return flag;
 }
-int terminate(char str[],int j,FILE *fp){
+int terminate(char str[],int j,FILE *fp){	// for classfication of current string as keyword or identifier
 	str[j]='\0';
 	j=0;
 	if(iskeyword(str) == 1){
@@ -33,10 +32,10 @@ int main(void){
 	char c,str[32],op[2],op_flag=0,temp[2];
 	FILE *fprt;
 	FILE *fp;
-	fprt=fopen("/home/fzx/Desktop/C prog/test2.c","r");
-	fp=fopen("/home/fzx/Desktop/C prog/output.txt","w+");
+	fprt=fopen("/home/fzx/Desktop/C prog/test2.c","r");//Input file
+	fp=fopen("/home/fzx/Desktop/C prog/output.txt","w+");// ouput file
 	while((c=fgetc(fprt))!=EOF){
-		if(c=='/'||c=='*'||c=='%'||c=='='){
+		if(c=='/'||c=='*'||c=='%'){		// those operator whoes repetion does not make sense
 			if(cf==1){
 				j=terminate(str,j,fp);
 				cf=0;
@@ -44,7 +43,8 @@ int main(void){
 			operator++;
 			fprintf(fp,"%c is operator\n",c);
 		}
-		else if((c=='+'||c=='-'||c=='&'||c=='|')&&op_flag==0){
+		// ++, == , &&, -- are special case ans must be handled carefully using op_flag and op[] array
+		else if((c=='+'||c=='-'||c=='&'||c=='|'||c=='=')&&op_flag==0){
 			if(cf==1){
 				j=terminate(str,j,fp); 
 				cf=0; 
@@ -52,7 +52,7 @@ int main(void){
 			op[0]=c;
 			op_flag=1;
 		}
-		else if((c=='+'||c=='-'||c=='&'||c=='|')&&op_flag==1){
+		else if((c=='+'||c=='-'||c=='&'||c=='|'||c=='=')&&op_flag==1){
 			if(cf==1){
 				j=terminate(str,j,fp);  
 				cf=0;
@@ -66,14 +66,9 @@ int main(void){
 			str[j++]=c;
 			cf=1;
 		}
-		else if((c==' '||c=='\n'||c==','||c=='(')&&(j!=0)){
+		else if((c==' '||c=='\n'||c==','||c=='('||c=='['||c=='{')&&(j!=0)){
 			j=terminate(str,j,fp);
 			cf=0;
-		}
-		else if((c==' '||c=='\n')&&(op_flag==1)){
-			op_flag=0;
-			fprintf(fp,"%c is operator\n",op[0]);
-			operator++;
 		}
 		else if(op_flag==1){
 			op_flag=0;
