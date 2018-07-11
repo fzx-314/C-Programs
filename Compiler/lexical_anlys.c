@@ -1,3 +1,5 @@
+/* program for lexical analyser */
+#include "convert.h"	// To remove comments from file
 #include<stdio.h>
 #include<string.h>
 int keyword=0,indentifier=0;
@@ -33,6 +35,9 @@ int main(void){
 	FILE *fprt;
 	FILE *fp;
 	fprt=fopen("/home/fzx/Desktop/C prog/test2.c","r");//Input file
+	convert(fprt);		//function of convert.h
+	fclose(fprt);
+	fprt=fopen("/home/fzx/Desktop/C prog/temp.c","r");
 	fp=fopen("/home/fzx/Desktop/C prog/output.txt","w+");// ouput file
 	while((c=fgetc(fprt))!=EOF){
 		if(c=='/'||c=='*'||c=='%'){		// those operator whoes repetion does not make sense
@@ -76,6 +81,11 @@ int main(void){
 			operator++;
 		}
 	}
+	fprintf(fp,"Number of keyword %d,Number of operator %d,Number of indentifier %d\n",keyword,operator,indentifier);
+	fclose(fp);
+	fclose(fprt);
+	remove("/home/fzx/Desktop/C prog/temp.c");
+}
 	fprintf(fp,"Number of keyword %d,Number of operator %d,Number of indentifier %d\n",keyword,operator,indentifier);
 	fclose(fp);
 	fclose(fprt);
