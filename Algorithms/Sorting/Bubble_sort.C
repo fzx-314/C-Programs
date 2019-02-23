@@ -1,7 +1,11 @@
 #include<stdio.h>
+/**
+ * @breif C program to Sort array of 10 elements 
+ *        using bubble sort
+ */
 int main()
 {
-    int i=0,j,temp=0,a[10];
+    unsigned int i=0,j,temp=0,a[10];
     for(;i<10;i++)
     {
         printf("Enter %d element\n",i+1);
